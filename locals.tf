@@ -21,7 +21,10 @@ locals {
    
    #TG#
   app_url                  = "prod-message.enrollible.com"
-
+  
+  ## CodeDeploy ##
+  service_role_codedeploy  = ""
+  
   ## Values for ASG and Capacity Provider##
   asg_configname          = "Tic-Tac"
   min_size                  = 1
