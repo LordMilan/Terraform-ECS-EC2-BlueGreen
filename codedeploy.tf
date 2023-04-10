@@ -33,7 +33,7 @@ resource "aws_codedeploy_deployment_group" "main" {
   }
 
   ecs_service {
-    cluster_name = var.cluster
+    cluster_name = local.cluster_name
     service_name = aws_ecs_service.ecs_service.name
   }
 
