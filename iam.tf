@@ -51,7 +51,7 @@ resource "aws_iam_instance_profile" "ecs_service_role" {
 }
 
 # create a service role for codedeploy
-resource "aws_iam_role" "codedeploy_Role" {
+resource "aws_iam_role" "codedeploy_service" {
   name = "codedeploy-service-role"
 
   assume_role_policy = <<EOF
