@@ -41,7 +41,7 @@ resource "aws_codedeploy_deployment_group" "main" {
     target_group_pair_info {
       prod_traffic_route {
         listener_arns = [
-          aws_lb_listener.main_blue_green.arn]
+          local.alb_listener_arn]
       }
 
       target_group {
