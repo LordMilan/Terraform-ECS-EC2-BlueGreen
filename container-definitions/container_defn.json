@@ -1,0 +1,22 @@
+[
+    {
+      "name": "${container_name}",
+      "image": "${ecr_image}",
+      "cpu": ${cpu},
+      "memoryReservation": ${memoryReservation},
+      "essential": ${essential},
+      "portMappings": [
+        {
+          "containerPort": ${containerPort}
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "${log_driver}",
+        "options": {
+          "awslogs-group" : "${awslogs-group}",
+          "awslogs-region": "${awslogs-region}",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+]
