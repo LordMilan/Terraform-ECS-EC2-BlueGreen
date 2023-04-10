@@ -15,7 +15,7 @@ resource "aws_lb_target_group" "blue" {
     matcher             = "200,301,302"
   }
 
-  depends_on = [aws_alb.existing.arn]
+ 
 }
 
 ## Listener Rule for APP_BLUE is created here ##
@@ -57,5 +57,5 @@ resource "aws_lb_target_group" "green" {
     matcher             = "200,301,302"
   }
 
-  depends_on = [aws_alb.existing.arn]
+
 }
