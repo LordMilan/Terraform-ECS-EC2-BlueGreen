@@ -80,7 +80,7 @@ resource "aws_iam_role_policy_attachment" "codedeploy_service" {
   policy_arn = ["arn:aws:iam::aws:policy/service-role/AWSCodeDeployRole"]
 }
 
-resource "aws_iam_role_policy_attachment" "codedeploy_service" {
+resource "aws_iam_role_policy_attachment" "codedeploy_service2" {
   role       = "${aws_iam_role.codedeploy_service.name}"
   policy_arn = ["arn:aws:iam::aws:policy/AWSCodeDeployRoleForECS"]
 }
