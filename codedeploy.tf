@@ -55,16 +55,6 @@ resource "aws_codedeploy_deployment_group" "main" {
     }
   }
 
-  trigger_configuration {
-    trigger_events = [
-      "DeploymentSuccess",
-      "DeploymentFailure",
-    ]
-
-    trigger_name       = data.external.commit_message.result["message"]
-    trigger_target_arn = var.sns_topic_arn
-  }
-
   lifecycle {
     ignore_changes = [blue_green_deployment_config]
   }
