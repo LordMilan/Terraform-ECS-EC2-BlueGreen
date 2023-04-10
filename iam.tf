@@ -77,5 +77,5 @@ EOF
 # required for deployments which are to an EC2 compute platform
 resource "aws_iam_role_policy_attachment" "codedeploy_service" {
   role       = "${aws_iam_role.codedeploy_service.name}"
-  policy_arn = "arn:aws:iam::aws:policy/service-role/AWSCodeDeployRole"
+  policy_arn = ["arn:aws:iam::aws:policy/service-role/AWSCodeDeployRole", "arn:aws:iam::aws:policy/AWSCodeDeployRoleForECS"]
 }
