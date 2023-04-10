@@ -1,5 +1,5 @@
 # Note:
-- Existing VPC, ECR, Application Load balancer and Key-Pair is used. New ones are not created. So, you need to provide their values in locals.tf.
+- Existing VPC, Application Load balancer and Key-Pair is used. New ones are not created. So, you need to provide their values in locals.tf.
 
 # Summary:
 This project creates a simple infrastructure using Terraform and AWS cloud provider. It consists of:
