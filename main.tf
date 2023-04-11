@@ -10,7 +10,7 @@ terraform {
 # Use this for S3 as backend ##
   backend "s3" {
     bucket = "terraformstatefiles-prod-cts"
-    key    = "tick-tac/terraform.tfstate"
+    key    = "enrollible-msg-center-prod-BG/terraform.tfstate"
     region = "us-east-1"
     profile = "prod-halopay"
   }
