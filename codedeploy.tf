@@ -34,7 +34,7 @@ resource "aws_codedeploy_deployment_group" "API" {
 
   ecs_service {
     cluster_name = local.cluster_name
-    service_name = aws_ecs_service.ecs_service.name
+    service_name = aws_ecs_service.service_api.name
   }
 
   load_balancer_info {
@@ -45,11 +45,11 @@ resource "aws_codedeploy_deployment_group" "API" {
       }
 
       target_group {
-        name = aws_lb_target_group.blue.name
+        name = aws_lb_target_group.api_blue.name
       }
 
       target_group {
-        name = aws_lb_target_group.green.name
+        name = aws_lb_target_group.api_green.name
       }
 
     }
@@ -97,7 +97,7 @@ resource "aws_codedeploy_deployment_group" "UI" {
 
   ecs_service {
     cluster_name = local.cluster_name
-    service_name = aws_ecs_service.ecs_service.name
+    service_name = aws_ecs_service.service_ui.name
   }
 
   load_balancer_info {
@@ -108,11 +108,11 @@ resource "aws_codedeploy_deployment_group" "UI" {
       }
 
       target_group {
-        name = aws_lb_target_group.blue.name
+        name = aws_lb_target_group.ui_blue.name
       }
 
       target_group {
-        name = aws_lb_target_group.green.name
+        name = aws_lb_target_group.ui_green.name
       }
 
     }

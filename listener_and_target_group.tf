@@ -15,12 +15,12 @@ resource "aws_lb_target_group" "api_blue" {
     matcher             = "200,301,302"
   }
 
- depends_on = [data.aws_lb.existing.arn]
+ depends_on = [local.alb_arn]
 }
 
 ## Listener Rule for API_BLUE is created here ##
 resource "aws_lb_listener_rule" "api_blue" {
- depends_on = [data.aws_lb.existing.arn]
+ depends_on = [local.alb_arn]
     lifecycle {
     create_before_destroy = true
   }
@@ -57,7 +57,7 @@ resource "aws_lb_target_group" "api_green" {
     matcher             = "200,301,302"
   }
 
-depends_on = [data.aws_lb.existing.arn]
+depends_on = [local.alb_arn]
 }
 
 
@@ -78,13 +78,13 @@ resource "aws_lb_target_group" "ui_blue" {
     matcher             = "200,301,302"
   }
 
- depends_on = [data.aws_lb.existing.arn]
+ depends_on = [local.alb_arn]
 
 }
 
 ## Listener Rule for UI_BLUE is created here ##
 resource "aws_lb_listener_rule" "ui_blue" {
- depends_on = [data.aws_lb.existing.arn]
+ depends_on = [local.alb_arn]
     lifecycle {
     create_before_destroy = true
   }
@@ -121,5 +121,5 @@ resource "aws_lb_target_group" "ui_green" {
     matcher             = "200,301,302"
   }
 
-depends_on = [data.aws_lb.existing.arn]
+depends_on = [local.alb_arn]
 }
