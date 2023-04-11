@@ -12,7 +12,7 @@ resource "aws_ecs_task_definition" "task-definition-api" {
     memoryReservation = local.memoryReservation_api
     log_driver        = local.log_driver
     essential         = local.essential
-    ecr_image         = "${aws_ecr_repository.app.repository_url}:${local.docker_tag_app}"
+    ecr_image         = "${aws_ecr_repository.api.repository_url}:${local.docker_tag_api}"
   })
   network_mode        = local.network_mode
   tags = {
@@ -33,7 +33,7 @@ resource "aws_ecs_task_definition" "task-definition-ui" {
     memoryReservation = local.memoryReservation_ui
     log_driver        = local.log_driver
     essential         = local.essential
-    ecr_image         = local.ecr_image_ui
+    ecr_image         = "${aws_ecr_repository.ui.repository_url}:${local.docker_tag_ui}"
   })
   network_mode        = local.network_mode
   tags = {
