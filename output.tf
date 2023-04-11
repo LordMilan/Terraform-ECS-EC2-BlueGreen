@@ -16,12 +16,12 @@ output "UI_URL" {
 
   ## GET UI applicationName ##
  output "UI_applicationName" {
-   value = "${aws_codedeploy_deployment_group.UI[1].app_name}"
+   value = "${aws_codedeploy_deployment_group.UI.app_name}"
  }
 
   ## GET UI DeploymentGroup Name ##
  output "UI_DeploymentGroupName" {
-   value = "${aws_codedeploy_deployment_group.UI[1].deployment_group_name}"
+   value = "${aws_codedeploy_deployment_group.UI.deployment_group_name}"
  }
 
  ## Get API link ##
@@ -36,12 +36,12 @@ output "API_URL" {
 
   ## GET API applicationName ##
  output "API_applicationName" {
-   value = "${aws_codedeploy_deployment_group.API[1].app_name}"
+   value = "${aws_codedeploy_deployment_group.API.app_name}"
  }
 
   ## GET API DeploymentGroup Name ##
  output "API_DeploymentGroupName" {
-   value = "${aws_codedeploy_deployment_group.API[1].deployment_group_name}"
+   value = "${aws_codedeploy_deployment_group.API.deployment_group_name}"
  }
 # output "alb_dns" {
 #   value = aws_lb.test-lb.dns_name
