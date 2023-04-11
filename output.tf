@@ -6,7 +6,7 @@ output "alb_dns" {
 
 ## Get UI link ##
 output "app" {
-   value = "${local.app_url}"
+   value = "${local.api_url}"
  }
 
 
