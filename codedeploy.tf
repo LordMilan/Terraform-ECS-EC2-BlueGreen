@@ -5,7 +5,7 @@ resource "aws_codedeploy_app" "API" {
 
 // AWS Codedeploy Group for each codedeploy app created
 resource "aws_codedeploy_deployment_group" "API" {
-  count = 1
+  # count = 1
   app_name               = aws_codedeploy_app.API.name
   deployment_config_name = "CodeDeployDefault.ECSAllAtOnce"
   deployment_group_name  = "deployment-group-${local.task_name_api}"
@@ -68,7 +68,7 @@ resource "aws_codedeploy_app" "UI" {
 
 // AWS Codedeploy Group for each codedeploy app created
 resource "aws_codedeploy_deployment_group" "UI" {
-  count = 1
+  # count = 1
   app_name               = aws_codedeploy_app.UI.name
   deployment_config_name = "CodeDeployDefault.ECSAllAtOnce"
   deployment_group_name  = "deployment-group-${local.task_name_ui}"
