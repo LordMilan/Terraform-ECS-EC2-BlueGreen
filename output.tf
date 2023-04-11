@@ -30,17 +30,17 @@ output "API_URL" {
  }
 
  ## GET API Task Definition ARN ##
- output "UI_Task-Definition-ARN" {
+ output "API_Task-Definition-ARN" {
    value = "${aws_ecs_task_definition.task-definition-api.arn}"
  }
 
   ## GET API applicationName ##
- output "UI_applicationName" {
+ output "API_applicationName" {
    value = "${aws_codedeploy_deployment_group.API.app_name}"
  }
 
   ## GET API DeploymentGroup Name ##
- output "UI_applicationName" {
+ output "API_applicationName" {
    value = "${aws_codedeploy_deployment_group.API.deployment_group_name}"
  }
 # output "alb_dns" {
