@@ -20,7 +20,7 @@ output "UI_URL" {
  }
 
   ## GET UI DeploymentGroup Name ##
- output "UI_applicationName" {
+ output "UI_DeploymentGroupName" {
    value = "${aws_codedeploy_deployment_group.UI.deployment_group_name}"
  }
 
@@ -40,7 +40,7 @@ output "API_URL" {
  }
 
   ## GET API DeploymentGroup Name ##
- output "API_applicationName" {
+ output "API_DeploymentGroupName" {
    value = "${aws_codedeploy_deployment_group.API.deployment_group_name}"
  }
 # output "alb_dns" {
