@@ -1,5 +1,7 @@
 # Note:
 - Existing VPC, Application Load balancer and Key-Pair is used. New ones are not created. So, you need to provide their values in locals.tf.
+- Build Scripts for building Image and pushing to ECR is present in local-exec.tf. Modify it accordingly.
+- Terraform Backend and provider is configured in main.tf. Modify it accordingly.
 
 # Summary:
 This project creates a simple infrastructure using Terraform and AWS cloud provider. It consists of:
